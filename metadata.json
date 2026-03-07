@@ -1,0 +1,5 @@
+{
+  "name": "PopX App",
+  "description": "A pixel-perfect mobile application interface for PopX, featuring onboarding, authentication, and profile settings.",
+  "requestFramePermissions": []
+}

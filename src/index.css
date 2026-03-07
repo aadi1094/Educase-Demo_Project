@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-popx-purple: #6C25FF;
+  --color-popx-secondary: #6C25FF4D;
+  --color-popx-gray: #F9F9F9;
+  --color-popx-text-dark: #1D2226;
+  --color-popx-text-muted: #6E6E6E;
+}
+
+@layer base {
+  body {
+    @apply bg-gray-100 font-sans text-popx-text-dark;
+  }
+}
+
+/* Custom Floating Label Input Styles */
+.floating-label-group {
+  @apply relative mb-6;
+}
+
+.floating-label-group input {
+  @apply w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:border-popx-purple transition-colors bg-transparent;
+}
+
+.floating-label-group label {
+  @apply absolute left-3 -top-2.5 px-1 bg-white text-xs font-medium text-popx-purple transition-all pointer-events-none;
+}
+
+.floating-label-group label.required::after {
+  content: "*";
+  @apply text-red-500 ml-0.5;
+}
